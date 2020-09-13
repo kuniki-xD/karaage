@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour
 {
@@ -8,7 +9,12 @@ public class TitleController : MonoBehaviour
 
     void Start()
     {
-        
+        button.Init(onButtonDown);
+    }
+
+    private void onButtonDown()
+    {
+        SceneManager.LoadSceneAsync("SelectScene");
     }
 
 }
